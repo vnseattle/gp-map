@@ -2,7 +2,6 @@
  class User{
     // Table config 
     private $conn;
-    private $table= 'users';
 
     // User Properties
     public $id;
@@ -12,6 +11,7 @@
     public $state;
     public $latitude;
     public $longitude;
+    public $zip;
 
     // constructor
     public function __construct($db){
@@ -21,7 +21,7 @@
     // Get user 
     public function getUser($id){
         // Query 
-        $sql = "SELECT * FROM `$table` where id='".$id."'";
+        $sql = "SELECT * FROM users where id='".$id."'";
         // Prepare statment 
         $stmt = $this->conn->prepare($sql);
         // Execute 

@@ -32,7 +32,8 @@ if($num>0){
             'city' => $city,
             'state' => $state,
             'latitude' => $latitude,
-            'longitude'=> $longitude
+            'longitude'=> $longitude,
+            'zip' => $zip
         );
 
         array_push($user_arr,$user_item);

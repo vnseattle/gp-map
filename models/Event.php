@@ -2,7 +2,6 @@
  class Event{
     // Table config 
     private $conn;
-    private $table= 'event';
 
     // Event Properties
     public $id;

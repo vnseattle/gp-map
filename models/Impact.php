@@ -2,7 +2,6 @@
  class Impact{
     // Table config 
     private $conn;
-    private $table= 'impact';
 
     // User Properties
     public $id;
