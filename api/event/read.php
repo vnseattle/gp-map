@@ -31,11 +31,11 @@ if($num>0){
         $event_item = array(
             'id' => $id,
             'title' => $title,
-            'start_date_time' => $start_date_time,
-            'end_date_time' => $end_date_time,
+            'start_date_time' => substr($start_date_time,0,16),
+            'end_date_time' => substr($end_date_time,0,16),
             'latitude' => $latitude,
             'longitude'=> $longitude,
-            'distance' => $distance
+            'distance' => substr(round($distance,1),0,3)
         );
 
         array_push($event_arr,$event_item);
