@@ -6,7 +6,7 @@ header('Content-Type: application/json');
 include_once '../../config/Database.php';
 include_once '../../models/Impact.php';
 
-// GET User ID
+// GET Impact ID
 $id = $_GET['id'];
 
 // Instantiate DB & Connect
@@ -18,7 +18,7 @@ $impact = new Impact($db);
 $result = $impact->getImpacts($id);
 $num = $result->rowCount();
 
-// Check if any user
+// Check if any impacts
 if($num>0){
     // impact array
     $impact_arr = array();
