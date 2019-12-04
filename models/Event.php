@@ -24,7 +24,7 @@
         $sql = "SELECT id,title,start_date_time,end_date_time,latitude,longitude,
         ( 3959 * acos( cos( radians('".$curr_lat."') ) * cos( radians( latitude ) ) 
         * cos( radians( longitude ) - radians('".$curr_lng."') ) + sin( radians('".$curr_lat."') ) 
-        * sin( radians( latitude ) ) ) ) AS distance FROM events WHERE `start_date_time`>'".$date." 0:0:01' AND `end_date_time` < '".$date."23:59:59' HAVING distance < '".$dis."' ORDER BY distance  LIMIT 120";
+        * sin( radians( latitude ) ) ) ) AS distance FROM events WHERE `start_date_time`<='".$date." 0:0:01' AND `end_date_time` >= '".$date."23:59:59' HAVING distance < '".$dis."' ORDER BY distance  LIMIT 120";
 
         // Prepare statment 
         $stmt = $this->conn->prepare($sql);
