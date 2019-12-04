@@ -1,15 +1,14 @@
 <?php
- class User{
+ class Impact{
     // Table config 
     private $conn;
-    private $table= 'users';
+    private $table= 'impact';
 
     // User Properties
     public $id;
-    public $first_name;
-    public $last_name;
-    public $city;
-    public $state;
+    public $title;
+    public $description;
+    public $duration_hours;
     public $latitude;
     public $longitude;
 
@@ -18,10 +17,13 @@
         $this->conn = $db;
     }
     
-    // Get user 
-    public function getUser($id){
+    // Get Impacts 
+    public function getImpacts($id){
         // Query 
-        $sql = "SELECT * FROM `$table` where id='".$id."'";
+        $sql = "SELECT * FROM `impacts` 
+        INNER JOIN events ON impacts.event_id = events.id 
+        where user_id=".$id."";
+
         // Prepare statment 
         $stmt = $this->conn->prepare($sql);
         // Execute 
