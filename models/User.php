@@ -10,6 +10,8 @@
     public $last_name;
     public $city;
     public $state;
+    public $latitude;
+    public $longitude;
 
     // constructor
     public function __construct($db){

@@ -6,13 +6,16 @@ header('Content-Type: application/json');
 include_once '../../config/Database.php';
 include_once '../../models/User.php';
 
+// GET User ID
+$id = $_GET['id'];
+
 // Instantiate DB & Connect
 $database = new Database();
 $db = $database->connect();
 
 // Instantiate User Object
 $user = new User($db);
-$result = $user->getUser('2522286');
+$result = $user->getUser($id);
 $num = $result->rowCount();
 
 // Check if any user
@@ -27,7 +30,9 @@ if($num>0){
             'first_name' => $first_name,
             'last_name' => $last_name,
             'city' => $city,
-            'state' => $state
+            'state' => $state,
+            'latitude' => $latitude,
+            'longitude'=> $longitude
         );
 
         array_push($user_arr,$user_item);
