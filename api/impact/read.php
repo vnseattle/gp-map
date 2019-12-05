@@ -7,7 +7,12 @@ include_once '../../config/Database.php';
 include_once '../../models/Impact.php';
 
 // Find impacts by uid
-$uid = $_GET['id'];
+$uid = 0;
+
+if(!empty($_GET['id'])){
+    $uid = $_GET['id'];
+}
+
 
 // Instantiate DB & Connect
 $database = new Database();

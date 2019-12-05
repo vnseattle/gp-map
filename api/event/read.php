@@ -7,10 +7,27 @@ include_once '../../config/Database.php';
 include_once '../../models/Event.php';
 
 // GET Event locaiton 
-$lat = $_GET['lat'];
-$lng = $_GET['lng'];
-$dis = $_GET['dis'];
-$date = $_GET['date'];
+$lat = '0';
+$lng = '0';
+$dis = '0';
+$date = '0';
+
+if(!empty($_GET['lat'])){
+    $lat = $_GET['lat'];
+}
+
+if(!empty($_GET['lng'])){
+    $lng = $_GET['lng'];
+}
+
+if(!empty($_GET['dis'])){
+    $dis = $_GET['dis'];
+}
+
+if(!empty($_GET['date'])){
+    $date = $_GET['date'];
+}
+
 
 // Instantiate DB & Connect
 $database = new Database();

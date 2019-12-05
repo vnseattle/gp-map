@@ -13,9 +13,9 @@ var USER_DISTANCE = 15;
  * Set up the map 
  */
 function initMap() {
-  let searchParams = new URLSearchParams(window.location.search);
+  var searchParams = new URLSearchParams(window.location.search);
   if(searchParams.has('uid')){
-    let uid = searchParams.get('uid');
+    var uid = searchParams.get('uid');
     // import user
     var user = new User(uid);
     // display user info
