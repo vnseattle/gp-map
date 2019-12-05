@@ -23,12 +23,14 @@
                   
                 
                 </div>
+                <span style="font-weight: lighter;">change user</span>
                 <select class="form-control" id="userID" value='Change User'></select>
 
               </div>
               <br/>
               <div class="card">
                   <div class="card-body">
+                    <span style="font-weight: lighter;">Set new home</span>
 
                           <div >
                               <select class="form-control" id="datepicker">
@@ -86,9 +88,9 @@
     });
 
      // FOR TESTING USER
-     let searchParams = new URLSearchParams(window.location.search);
-      if(searchParams.has('uid')){
-
+     let homeUrl = new URLSearchParams(window.location.search);
+      if(!homeUrl.has('uid')){
+        window.location.href = window.location.href.replace( /[\?#].*|$/, "?uid=2422854"); // default Dori 
       }
      // append user 
      var randomUser = getJson('http://vnsdev.com/gp-map/api/user/random.php');
