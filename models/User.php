@@ -31,4 +31,19 @@
 
     }
 
+    // Get 10 Random User which valid latitude
+    public function getRandomUser(){
+        // Query 
+        $sql = "SELECT * FROM users WHERE `latitude` !=0 ORDER BY RAND() LIMIT 10";
+        // Prepare statment 
+        $stmt = $this->conn->prepare($sql);
+        // Execute 
+        $stmt->execute();
+        
+        return $stmt;
+
+    }
+
+
+
  }
