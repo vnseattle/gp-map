@@ -60,13 +60,26 @@ EXAMPLE
 
 ### Features!
 
-This function is to show events nearby to the user. 
+Events finder 
 
 1.	Use Case 1: User accesses the page with their account and sees events nearby.
+<img src='http://vnsdev.com/gp-map/instruction/overview.png'>
+
 The user can have a quick view of the events: Title, distance from their house, etc
+<img src='http://vnsdev.com/gp-map/instruction/event_detail.png'>
+
+The user can also see their impacts on the map
+<img src='http://vnsdev.com/gp-map/instruction/impact.png'>
+
 2.	Use Case 2: User wants to try to move to another location and see events near them at X distance.
+<img src='http://vnsdev.com/gp-map/instruction/new_home.png'>
+
 By using the tool on the left side, the user can change the date, the new location by providing the address, and distance options.
+<img src='http://vnsdev.com/gp-map/instruction/control.png'>
+
 The red line helps the user keep track of the multiple new locations that they have created.
+<img src='http://vnsdev.com/gp-map/instruction/red_lines.png'>
+
 
 ### Resources
 
