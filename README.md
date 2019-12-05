@@ -6,6 +6,11 @@ This application was designed to demonstrate the communication of the back end a
   - Or you can run it directly by clicking to this link http://vnsdev.com/gp-map/
 
 ### Structure
+
+Overview 
+
+<img src='http://vnsdev.com/gp-map/instruction/server-client-side.png'>
+
 Folders 
 ```sh
 gp-map
