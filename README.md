@@ -3,7 +3,7 @@ This application was designed to demonstrate the communication of the back end a
 
 ### How to run?
   - Download or clone the project and run the file gp-map>public>“index.html”.
-  - Or you can run it directly by clicking to this link http://vnsdev.com/gp-map/
+  - Or you can run it directly by clicking to this link http://vnsdev.com/gp-map/public
 
 ### Structure
 
