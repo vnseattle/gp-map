@@ -40,10 +40,26 @@ gp-map
   - The public folder was created by JavaScript, HTML to get data from the back end via APIs so you can run the app on any browser or copy it to run separately. 
 
 ### Configs (Optional) 
-- Config the connection to your database
-    - Open the file ```“config/Database.php”```
-- Config the connection to your API and Google API
-    - Open the file ```“public/Scripts/configJS.js”```
+
+Config the connection to your database
+Open the file ```“config/Database.php”```
+
+| Constant | Description |Example  |
+| ------ | ------ | ------ |
+|  $db_servername| your server name  | 'localhost'|
+|  $db_username| your user name| 'root'|
+|  $db_password| your password  | '****'|
+|  db_dbname| database name | 'db_test'|
+
+
+Config the connection to your API and Google API
+Open the file ```“public/Scripts/configJS.js”```
+
+| Constant | Description |Example  |
+| ------ | ------ | ------ |
+|  API_SERVER| Link to the API  | 'http://vnsdev.com/gp-map/api/'|
+|  API_KEY_GOOGLE_MAP| your Google Map API | 'abCdxzgivepulseXWa'|
+
 
 ### APIs
 
