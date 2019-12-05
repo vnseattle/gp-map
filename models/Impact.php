@@ -22,7 +22,7 @@
         $sql = "SELECT * FROM `impacts` 
         INNER JOIN events ON impacts.event_id = events.id 
         where user_id=".$uid."";
-
+    
         // Prepare statment 
         $stmt = $this->conn->prepare($sql);
         // Execute 
