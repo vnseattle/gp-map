@@ -42,18 +42,20 @@ gp-map
 ### Configs (Optional) 
 
 Config the connection to your database
-Open the file ```“config/Database.php”```
+
+- Open the file ```“config/Database.php”```
 
 | Constant | Description |Example  |
 | ------ | ------ | ------ |
 |  $db_servername| your server name  | 'localhost'|
 |  $db_username| your user name| 'root'|
 |  $db_password| your password  | '****'|
-|  db_dbname| database name | 'db_test'|
+|  $db_dbname| database name | 'db_test'|
 
 
 Config the connection to your API and Google API
-Open the file ```“public/Scripts/configJS.js”```
+
+- Open the file ```“public/Scripts/configJS.js”```
 
 | Constant | Description |Example  |
 | ------ | ------ | ------ |
