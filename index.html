@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Map View</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row" style='height:90vh'>
+        <div class="col-sm-2" style="min-width: 300px;">
+            <div class="card">
+                <div class="card-body">
+                  <img class="card-img-top" src="assets/avatar.png" alt="Card image cap">
+                  <h5 class="card-title"><div id="user-name"></div></h5>
+                  <p class="card-text"><div id="user-add"></div></p>
+                  <a href="#" id="goHome" class="btn btn-primary">Go Home</a>
+                  
+                
+                </div>
+                <select class="form-control" id="userID" value='Change User'></select>
+
+              </div>
+              <br/>
+              <div class="card">
+                  <div class="card-body">
+
+                          <div >
+                              <select class="form-control" id="datepicker">
+                                <option value='2015-12-5'>Dec 5,2015</option>
+                                <option value='2015-12-6'>Yesterday: Dec 6,2015</option>
+                                <option value='2015-12-7' selected>Today: Dec 7,2015</option>
+                                <option value='2015-12-8'>Tomorrow: Dec 8,2015</option>
+                                <option value='2015-12-9'>Dec 9,2015</option>
+                              </select>
+                          </div>
+                          <div>
+                              <input id="address" class="form-control mr-sm-2" type="search" placeholder="Address" aria-label="Address" value='ST. Johns, Austin'>
+                          </div>
+                          <div >
+                              <select class="form-control" id="distance">
+                                <option value='5'>5 miles</option>
+                                <option value='10'>10 miles</option>
+                                <option value='15'>15 miles</option>
+                                <option value='20'>20 miles</option>
+                                <option value='25'>25 miles</option>
+                                <option value='50'>50 miles</option>
+                                <option value='100'>100 miles</option>
+                              </select>
+                          </div>
+
+                          <div>
+                              <button id="search" class="btn btn-outline-success my-1 my-sm-0" type="submit">Search</button>
+                          </div>
+                  </div>
+                </div>
+
+                
+
+        </div>
+        <div class="col" id="map"></div>
+      </div>
+      <div style='float:right'> 
+          <span class="icon"><img src="assets/icons/ticket_red.png" alt="Events" height="42" width="42"> Events </span>
+          <span class="icon"></span><img src="assets/icons/event.png" alt="Impacts" height="28" width="28"> Your Impacts </span>
+      </div>
+      
+    </div>
+    <script src="scripts/configJS.js"></script>
+    <script src="scripts/core.js"></script>
+    <script src="scripts/event.js"></script>
+    <script src="scripts/impact.js"></script>
+    <script src="scripts/user.js"></script>
+    <script src="scripts/map.js"></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script id="gmap" src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyA8lt4Q_nxQKL7isuoL_Fwm8PBkmEXvMBo"
+    async defer></script>
+   <script>
+    $("document").ready(function () {
+        $('#gmap').attr("src", "https://maps.googleapis.com/maps/api/js?callback=initMap&"+'&key=' + API_KEY_GOOGLE_MAP);
+    });
+
+     // FOR TESTING USER
+     let searchParams = new URLSearchParams(window.location.search);
+      if(searchParams.has('uid')){
+
+      }
+     // append user 
+     var randomUser = getJson('http://vnsdev.com/gp-map/api/user/random.php');
+     for(var i=0; i<randomUser.length; i++){
+       $("#userID").append("<option value='"+randomUser[i].id+"'>"+randomUser[i].first_name+"</option>");
+     }
+
+     //changing user listener
+     $( "#userID" ).change(function() {
+      window.location.href = window.location.href.replace( /[\?#].*|$/, "?uid="+$("#userID").val());
+    });
+
+   </script>
+    
+  </body>
+</html>
