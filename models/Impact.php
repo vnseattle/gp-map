@@ -3,10 +3,10 @@
     // Table config 
     private $conn;
 
-    // User Properties
+    // Impact Properties
     public $id;
     public $title;
-    public $description;
+    public $checkin_at;
     public $duration_hours;
     public $latitude;
     public $longitude;
@@ -17,11 +17,11 @@
     }
     
     // Get Impacts 
-    public function getImpacts($id){
+    public function getImpacts($uid){
         // Query 
         $sql = "SELECT * FROM `impacts` 
         INNER JOIN events ON impacts.event_id = events.id 
-        where user_id=".$id."";
+        where user_id=".$uid."";
 
         // Prepare statment 
         $stmt = $this->conn->prepare($sql);

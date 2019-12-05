@@ -6,8 +6,8 @@ header('Content-Type: application/json');
 include_once '../../config/Database.php';
 include_once '../../models/Impact.php';
 
-// GET Impact ID
-$id = $_GET['id'];
+// Find impacts by uid
+$uid = $_GET['id'];
 
 // Instantiate DB & Connect
 $database = new Database();
@@ -15,7 +15,7 @@ $db = $database->connect();
 
 // Instantiate Impact Object
 $impact = new Impact($db);
-$result = $impact->getImpacts($id);
+$result = $impact->getImpacts($uid);
 $num = $result->rowCount();
 
 // Check if any impacts
@@ -28,7 +28,7 @@ if($num>0){
         $impact_item = array(
             'id' => $id,
             'title' => $title,
-            'description' => $description,
+            'checkin_at' => $checkin_at,
             'duration_hours' => $duration_hours,
             'latitude' => $latitude,
             'longitude'=> $longitude
