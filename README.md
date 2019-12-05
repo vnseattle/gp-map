@@ -72,5 +72,3 @@ The red line helps the user keep track of the multiple new locations that they h
 * [jQuery] - JavaScript library designed to simplify HTML DOM.
 * [Bootstrap] - Free and open-source CSS framework. 
 * [Google Map API] - The Maps JavaScript API lets you customize maps with your own content.
-
-
