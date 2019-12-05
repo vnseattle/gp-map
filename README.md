@@ -42,6 +42,7 @@ Open the file “public/configJS.js”.
 
 ### APIs
 You can test the APIs by running the following links:
+
 | GET | API |
 | ------ | ------ |
 | User | [YOUR-HOST]/gp-map/api/__user__/read.php?id=[USER-ID] |
