@@ -9,7 +9,7 @@ This application was designed to demonstrate the communication of the back end a
 
 Overview 
 
-<img src='http://vnsdev.com/gp-map/instruction/server-client-side-1.png'>
+<img src='http://vnsdev.com/gp-map/instruction/server-client-side-2.png'>
 
 Folders 
 ```sh
@@ -22,9 +22,9 @@ gp-map
 |   └── user
 │       ├── read.php
 │       ├── random.php
-├── config
+├── config (Server-side)
 │   ├── Database.php
-├── models
+├── models (Server-side)
 │   ├── Event.php
 │   └── Impact.php
 │   └── User.php
