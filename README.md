@@ -9,7 +9,7 @@ This application was designed to demonstrate the communication of the back end a
 
 Overview 
 
-<img src='http://vnsdev.com/gp-map/instruction/server-client-side.png'>
+<img src='http://vnsdev.com/gp-map/instruction/server-client-side-1.png'>
 
 Folders 
 ```sh
